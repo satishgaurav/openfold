@@ -77,7 +77,7 @@ chi_angles_atoms = {
     "VAL": [["N", "CA", "CB", "CG1"]],
 }
 
-# If chi angles given in fixed-length array, this matrix determines how to mask
+# If chi angles are given in a fixed-length array, this matrix determines how to mask
 # them for each AA type. The order is as per restype_order (see below).
 chi_angles_mask = [
     [0.0, 0.0, 0.0, 0.0],  # ALA
@@ -136,8 +136,8 @@ chi_pi_periodic = [
 # 3: 'psi-group',
 # 4,5,6,7: 'chi1,2,3,4-group'
 # The atom positions are relative to the axis-end-atom of the corresponding
-# rotation axis. The x-axis is in direction of the rotation axis, and the y-axis
-# is defined such that the dihedral-angle-definiting atom (the last entry in
+# rotation axis. The x-axis is in the direction of the rotation axis, and the y-axis
+# is defined such that the dihedral-angle-defining atom (the last entry in
 # chi_angles_atoms above) is in the xy-plane (with a positive y-coordinate).
 # format: [atomname, group_idx, rel_position]
 rigid_group_atom_positions = {
@@ -407,10 +407,10 @@ residue_atoms = {
 # Due to symmetries in the amino acids the naming of atoms is ambiguous in
 # 4 of the 20 amino acids.
 # (The LDDT paper lists 7 amino acids as ambiguous, but the naming ambiguities
-# in LEU, VAL and ARG can be resolved by using the 3d constellations of
-# the 'ambiguous' atoms and their neighbours)
-# Because for LEU, VAL and ARG, no ambiguous exist when the prediction output is chi angle instead of the location of individual atoms.
-# For the rest, ASP and others, when you rotate the bond 180 degree, you get the same configuraiton due to symmetry.
+# in LEU, VAL, and ARG can be resolved by using the 3d constellations of
+# the 'ambiguous' atoms and their neighbors)
+# Because for LEU, VAL, and ARG, no ambiguity exists when the prediction output is chi angle instead of the location of individual atoms.
+# For the rest, ASP and others, when you rotate the bond 180 degrees, you get the same configuration due to symmetry.
 
 residue_atom_renaming_swaps = {
     "ASP": {"OD1": "OD2"},
@@ -432,7 +432,7 @@ Bond = collections.namedtuple(
 )
 BondAngle = collections.namedtuple(
     "BondAngle",
-    ["atom1_name", "atom2_name", "atom3name", "angle_rad", "stddev"],
+    ["atom1_name", "atom2_name", "atom3_name", "angle_rad", "stddev"],
 )
 
 
