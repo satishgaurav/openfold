@@ -909,7 +909,6 @@ class TemplateEmbedderMultimer(nn.Module):
             )
 
             single_template_embeds = {}
-            act = 0.
 
             template_positions, pseudo_beta_mask = pseudo_beta_fn(
                 single_template_feats["template_aatype"],
